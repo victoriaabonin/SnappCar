@@ -19,7 +19,7 @@ namespace Pricing.Infrastructure.Integrations
         {
             using (var httpClient = _clientFactory.CreateClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:49159/SnappetCars?carId={carId}");
+                var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:44308/SnappetCars?carId={carId}");
                 var response = await httpClient.SendAsync(request);
 
                 if (response.IsSuccessStatusCode)
